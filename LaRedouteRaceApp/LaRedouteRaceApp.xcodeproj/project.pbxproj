@@ -13,6 +13,7 @@
 		75DC798A2ED3986700399B17 /* BeeDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75DC79892ED3986300399B17 /* BeeDTO.swift */; };
 		75DC79BE2ED398D100399B17 /* Bee.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75DC79BD2ED398CE00399B17 /* Bee.swift */; };
 		75DC79C02ED398DD00399B17 /* Race.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75DC79BF2ED398DC00399B17 /* Race.swift */; };
+		75DC79C42ED39A8900399B17 /* RaceDurationDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75DC79C32ED39A8900399B17 /* RaceDurationDTO.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +24,7 @@
 		75DC79892ED3986300399B17 /* BeeDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeeDTO.swift; sourceTree = "<group>"; };
 		75DC79BD2ED398CE00399B17 /* Bee.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bee.swift; sourceTree = "<group>"; };
 		75DC79BF2ED398DC00399B17 /* Race.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Race.swift; sourceTree = "<group>"; };
+		75DC79C32ED39A8900399B17 /* RaceDurationDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaceDurationDTO.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +102,7 @@
 			isa = PBXGroup;
 			children = (
 				75DC79892ED3986300399B17 /* BeeDTO.swift */,
+				75DC79C32ED39A8900399B17 /* RaceDurationDTO.swift */,
 			);
 			path = DTOs;
 			sourceTree = "<group>";
@@ -185,6 +188,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				75DC79C42ED39A8900399B17 /* RaceDurationDTO.swift in Sources */,
 				75DC79BE2ED398D100399B17 /* Bee.swift in Sources */,
 				75DC797C2ED397E300399B17 /* ContentView.swift in Sources */,
 				75DC798A2ED3986700399B17 /* BeeDTO.swift in Sources */,
