@@ -14,6 +14,9 @@ class FetchRaceDurationUseCase {
         self.repository = repository
     }
     
+    /// Execute the use case
+    /// - Returns: Duration in seconds
+    /// - Throws: RaceRepositoryError if operation fails
     func excecute() async throws -> Int {
         let duration = try await repository.fetchRaceDuration()
         

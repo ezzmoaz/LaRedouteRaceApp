@@ -46,11 +46,12 @@ final class NetworkServiceImpl: NetworkService {
                 return try JSONDecoder().decode(T.self, from: data)
                 
             case 403:
-                // Check for CAPTCHA
-            
+                //TODO: Check for CAPTCHA
+                throw NetworkServiceError.serverError(httpResponse.statusCode, "CAPTCHA error")
                 
             case 429:
-                // Check for rateLimit
+                //TODO: Check for rateLimit
+                throw NetworkServiceError.serverError(httpResponse.statusCode, "rateLimit error")
             default:
                 throw NetworkServiceError.serverError(httpResponse.statusCode, "Server error")
             }

@@ -13,7 +13,7 @@ struct BeeDTO: Codable {
 }
 
 struct BeeListDTO: Codable {
-    let list: [BeeDTO]
+    let beeList: [BeeDTO]
 }
 
 extension BeeDTO {

@@ -7,7 +7,5 @@
 import Foundation
 
 struct Race {
-    let id: UUID
-    let durationInSeconds: Int
-    var participants: [Bee]
+    var durationInSeconds: Int
 }

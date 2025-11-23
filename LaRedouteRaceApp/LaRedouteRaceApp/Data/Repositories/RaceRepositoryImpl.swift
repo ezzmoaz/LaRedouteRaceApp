@@ -27,7 +27,7 @@ class RaceRepositoryImpl: RaceRepository {
     func fetchBeeList() async throws -> [Bee] {
         do {
             let dto = try await remoteDataSource.fetchBeesList()
-            return dto.list.map { $0.toDomain() }
+            return dto.beeList.map { $0.toDomain() }
         } catch let error as NetworkServiceError {
             throw mapError(error)
         } catch {
