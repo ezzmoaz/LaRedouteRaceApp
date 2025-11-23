@@ -8,11 +8,41 @@
 import Foundation
 
 class RaceRepositoryImpl: RaceRepository {
+    private let remoteDataSource: RaceRemoteDataSource
+    
+    init(remoteDataSource: RaceRemoteDataSource) {
+        self.remoteDataSource = remoteDataSource
+    }
     func fetchRaceDuration() async throws -> Int {
-        return 0
+        do {
+            let dto = try await remoteDataSource.fetchRaceDuration()
+            return dto.timeInSeconds
+        } catch let error as NetworkServiceError {
+            throw mapError(error)
+        } catch {
+            throw RaceRepositoryError.networkError
+        }
     }
     
     func fetchBeeList() async throws -> [Bee] {
-        return []
+        do {
+            let dto = try await remoteDataSource.fetchBeesList()
+            return dto.list.map { $0.toDomain() }
+        } catch let error as NetworkServiceError {
+            throw mapError(error)
+        } catch {
+            throw RaceRepositoryError.networkError
+        }
+    }
+    
+    private func mapError(_ error: NetworkServiceError) -> RaceRepositoryError {
+        switch error {
+        case .networkError:
+            return .networkError
+        case .decodingError, .invalidURL:
+            return .invalidData
+        case .serverError(_, let message):
+            return .serverError(message)
+        }
     }
 }
