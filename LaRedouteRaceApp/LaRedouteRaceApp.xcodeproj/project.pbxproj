@@ -22,6 +22,9 @@
 		75DC79DE2ED3A07500399B17 /* RaceViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75DC79DD2ED3A07500399B17 /* RaceViewModel.swift */; };
 		75DC79E12ED3A0F400399B17 /* FetchRaceDurationUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75DC79E02ED3A0F400399B17 /* FetchRaceDurationUseCase.swift */; };
 		75DC79E32ED3A1A900399B17 /* FetchBeesListUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75DC79E22ED3A1A900399B17 /* FetchBeesListUseCase.swift */; };
+		75DC79E52ED3C43200399B17 /* AppFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75DC79E42ED3C43200399B17 /* AppFactory.swift */; };
+		75DC79E72ED3C4D000399B17 /* LaRedouteRaceAppView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75DC79E62ED3C4D000399B17 /* LaRedouteRaceAppView.swift */; };
+		75DC79E92ED3C50400399B17 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75DC79E82ED3C50400399B17 /* AppCoordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +44,9 @@
 		75DC79DD2ED3A07500399B17 /* RaceViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaceViewModel.swift; sourceTree = "<group>"; };
 		75DC79E02ED3A0F400399B17 /* FetchRaceDurationUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchRaceDurationUseCase.swift; sourceTree = "<group>"; };
 		75DC79E22ED3A1A900399B17 /* FetchBeesListUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchBeesListUseCase.swift; sourceTree = "<group>"; };
+		75DC79E42ED3C43200399B17 /* AppFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFactory.swift; sourceTree = "<group>"; };
+		75DC79E62ED3C4D000399B17 /* LaRedouteRaceAppView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaRedouteRaceAppView.swift; sourceTree = "<group>"; };
+		75DC79E82ED3C50400399B17 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +79,9 @@
 		75DC79762ED397E300399B17 /* App */ = {
 			isa = PBXGroup;
 			children = (
+				75DC79E42ED3C43200399B17 /* AppFactory.swift */,
+				75DC79E82ED3C50400399B17 /* AppCoordinator.swift */,
+				75DC79E62ED3C4D000399B17 /* LaRedouteRaceAppView.swift */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -270,13 +279,16 @@
 			files = (
 				75DC79D42ED39DC500399B17 /* RaceRemoteDataSource.swift in Sources */,
 				75DC79DE2ED3A07500399B17 /* RaceViewModel.swift in Sources */,
+				75DC79E92ED3C50400399B17 /* AppCoordinator.swift in Sources */,
 				75DC79CE2ED39B5100399B17 /* RaceRepositoryImpl.swift in Sources */,
+				75DC79E72ED3C4D000399B17 /* LaRedouteRaceAppView.swift in Sources */,
 				75DC79C42ED39A8900399B17 /* RaceDurationDTO.swift in Sources */,
 				75DC79BE2ED398D100399B17 /* Bee.swift in Sources */,
 				75DC79DA2ED39E8E00399B17 /* RaceRemoteDataSourceImpl.swift in Sources */,
 				75DC797C2ED397E300399B17 /* ContentView.swift in Sources */,
 				75DC79E12ED3A0F400399B17 /* FetchRaceDurationUseCase.swift in Sources */,
 				75DC79D12ED39B9900399B17 /* NetworkService.swift in Sources */,
+				75DC79E52ED3C43200399B17 /* AppFactory.swift in Sources */,
 				75DC79E32ED3A1A900399B17 /* FetchBeesListUseCase.swift in Sources */,
 				75DC79CB2ED39AF700399B17 /* RaceRepository.swift in Sources */,
 				75DC798A2ED3986700399B17 /* BeeDTO.swift in Sources */,
