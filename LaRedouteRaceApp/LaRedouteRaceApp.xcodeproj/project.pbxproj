@@ -17,6 +17,8 @@
 		75DC79CB2ED39AF700399B17 /* RaceRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75DC79CA2ED39AF700399B17 /* RaceRepository.swift */; };
 		75DC79CE2ED39B5100399B17 /* RaceRepositoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75DC79CD2ED39B5100399B17 /* RaceRepositoryImpl.swift */; };
 		75DC79D12ED39B9900399B17 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75DC79D02ED39B9900399B17 /* NetworkService.swift */; };
+		75DC79D42ED39DC500399B17 /* RaceRemoteDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75DC79D32ED39DC500399B17 /* RaceRemoteDataSource.swift */; };
+		75DC79DA2ED39E8E00399B17 /* RaceRemoteDataSourceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75DC79D92ED39E8E00399B17 /* RaceRemoteDataSourceImpl.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +33,8 @@
 		75DC79CA2ED39AF700399B17 /* RaceRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaceRepository.swift; sourceTree = "<group>"; };
 		75DC79CD2ED39B5100399B17 /* RaceRepositoryImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaceRepositoryImpl.swift; sourceTree = "<group>"; };
 		75DC79D02ED39B9900399B17 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		75DC79D32ED39DC500399B17 /* RaceRemoteDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaceRemoteDataSource.swift; sourceTree = "<group>"; };
+		75DC79D92ED39E8E00399B17 /* RaceRemoteDataSourceImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaceRemoteDataSourceImpl.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +104,7 @@
 		75DC79852ED3983000399B17 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				75DC79D22ED39DB800399B17 /* DataSources */,
 				75DC79CF2ED39B8800399B17 /* NetworkService */,
 				75DC79CC2ED39B4100399B17 /* Repositories */,
 				75DC79862ED3984400399B17 /* DTOs */,
@@ -147,6 +152,15 @@
 				75DC79D02ED39B9900399B17 /* NetworkService.swift */,
 			);
 			path = NetworkService;
+			sourceTree = "<group>";
+		};
+		75DC79D22ED39DB800399B17 /* DataSources */ = {
+			isa = PBXGroup;
+			children = (
+				75DC79D32ED39DC500399B17 /* RaceRemoteDataSource.swift */,
+				75DC79D92ED39E8E00399B17 /* RaceRemoteDataSourceImpl.swift */,
+			);
+			path = DataSources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -221,9 +235,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				75DC79D42ED39DC500399B17 /* RaceRemoteDataSource.swift in Sources */,
 				75DC79CE2ED39B5100399B17 /* RaceRepositoryImpl.swift in Sources */,
 				75DC79C42ED39A8900399B17 /* RaceDurationDTO.swift in Sources */,
 				75DC79BE2ED398D100399B17 /* Bee.swift in Sources */,
+				75DC79DA2ED39E8E00399B17 /* RaceRemoteDataSourceImpl.swift in Sources */,
 				75DC797C2ED397E300399B17 /* ContentView.swift in Sources */,
 				75DC79D12ED39B9900399B17 /* NetworkService.swift in Sources */,
 				75DC79CB2ED39AF700399B17 /* RaceRepository.swift in Sources */,
