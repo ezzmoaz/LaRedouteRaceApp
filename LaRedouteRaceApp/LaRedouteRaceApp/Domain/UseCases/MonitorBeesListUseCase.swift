@@ -9,11 +9,14 @@ import Foundation
 
 class MonitorBeesListUseCase {
     private let repository: RaceRepository
+    private let pollingInterval: TimeInterval
     
     init(
-        repository: RaceRepository
+        repository: RaceRepository,
+        pollingInterval: TimeInterval = 0
     ) {
         self.repository = repository
+        self.pollingInterval = pollingInterval
     }
     
     /// Execute the use case with continuous updates
@@ -40,6 +43,8 @@ class MonitorBeesListUseCase {
                     DispatchQueue.main.async {
                         onUpdate(bees)
                     }
+                    // Wait before next poll
+                    try await Task.sleep(nanoseconds: UInt64(pollingInterval * 1_000_000_000))
                     
                 } catch let error as RaceRepositoryError {
                     // Check if cancelled during error
@@ -51,6 +56,10 @@ class MonitorBeesListUseCase {
                         onError(error)
                     }
                     
+                    // Handle rate limiting with backoff
+                    if error == .rateLimitExceeded {
+                        try? await Task.sleep(nanoseconds: 3_000_000_000)
+                    }
                 } catch {
                     // Check if this is a cancellation
                     if Task.isCancelled {

@@ -16,6 +16,8 @@ enum NetworkServiceError: Error {
     case decodingError
     case invalidURL
     case serverError(Int, String)
+    case rateLimitExceeded
+    case captchaRequired(URL)
 }
 
 
@@ -46,12 +48,15 @@ final class NetworkServiceImpl: NetworkService {
                 return try JSONDecoder().decode(T.self, from: data)
                 
             case 403:
-                //TODO: Check for CAPTCHA
-                throw NetworkServiceError.serverError(httpResponse.statusCode, "CAPTCHA error")
+                if let captchaResponse = try? JSONDecoder().decode(CaptchaResponseDTO.self, from: data),
+                   let url = URL(string: captchaResponse.captchaUrl) {
+                    throw NetworkServiceError.captchaRequired(url)
+                }
+                throw NetworkServiceError.serverError(403, "Forbidden")
                 
             case 429:
-                //TODO: Check for rateLimit
-                throw NetworkServiceError.serverError(httpResponse.statusCode, "rateLimit error")
+                throw NetworkServiceError.rateLimitExceeded
+                
             default:
                 throw NetworkServiceError.serverError(httpResponse.statusCode, "Server error")
             }

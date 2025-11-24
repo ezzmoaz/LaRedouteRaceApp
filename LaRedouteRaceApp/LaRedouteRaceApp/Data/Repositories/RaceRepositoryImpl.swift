@@ -41,6 +41,10 @@ class RaceRepositoryImpl: RaceRepository {
             return .networkError
         case .decodingError, .invalidURL:
             return .invalidData
+        case .rateLimitExceeded:
+            return .rateLimitExceeded
+        case .captchaRequired(let url):
+            return .captchaRequired(url)
         case .serverError(_, let message):
             return .serverError(message)
         }
