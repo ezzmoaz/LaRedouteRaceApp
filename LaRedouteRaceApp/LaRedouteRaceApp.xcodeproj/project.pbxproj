@@ -32,6 +32,7 @@
 		75DC79F92ED3C8D600399B17 /* BeeRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75DC79F82ED3C8D600399B17 /* BeeRowView.swift */; };
 		75DC79FB2ED3C90200399B17 /* CaptchaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75DC79FA2ED3C90200399B17 /* CaptchaView.swift */; };
 		75DC79FD2ED3C94F00399B17 /* RaceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75DC79FC2ED3C94F00399B17 /* RaceView.swift */; };
+		75DC79FF2ED3D61200399B17 /* CaptchaResponseDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75DC79FE2ED3D61200399B17 /* CaptchaResponseDTO.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -61,6 +62,7 @@
 		75DC79F82ED3C8D600399B17 /* BeeRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeeRowView.swift; sourceTree = "<group>"; };
 		75DC79FA2ED3C90200399B17 /* CaptchaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaptchaView.swift; sourceTree = "<group>"; };
 		75DC79FC2ED3C94F00399B17 /* RaceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaceView.swift; sourceTree = "<group>"; };
+		75DC79FE2ED3D61200399B17 /* CaptchaResponseDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaptchaResponseDTO.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,6 +148,7 @@
 		75DC79862ED3984400399B17 /* DTOs */ = {
 			isa = PBXGroup;
 			children = (
+				75DC79FE2ED3D61200399B17 /* CaptchaResponseDTO.swift */,
 				75DC79892ED3986300399B17 /* BeeDTO.swift */,
 				75DC79C32ED39A8900399B17 /* RaceDurationDTO.swift */,
 			);
@@ -326,6 +329,7 @@
 				75DC79E72ED3C4D000399B17 /* LaRedouteRaceAppView.swift in Sources */,
 				75DC79C42ED39A8900399B17 /* RaceDurationDTO.swift in Sources */,
 				75DC79BE2ED398D100399B17 /* Bee.swift in Sources */,
+				75DC79FF2ED3D61200399B17 /* CaptchaResponseDTO.swift in Sources */,
 				75DC79DA2ED39E8E00399B17 /* RaceRemoteDataSourceImpl.swift in Sources */,
 				75DC797C2ED397E300399B17 /* ContentView.swift in Sources */,
 				75DC79F92ED3C8D600399B17 /* BeeRowView.swift in Sources */,

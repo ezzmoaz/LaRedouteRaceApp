@@ -90,16 +90,6 @@ final class RaceViewModel: ObservableObject {
     }
     
     // MARK: - Private Methods
-    
-//    private func updateOnMain(_ block: @escaping () -> Void) async {
-//        await withCheckedContinuation { continuation in
-//            DispatchQueue.main.async {
-//                block()
-//                continuation.resume()
-//            }
-//        }
-//    }
-    
     private func startTimer() {
         DispatchQueue.main.async { [weak self] in
             guard let self = self else { return }
@@ -163,8 +153,20 @@ final class RaceViewModel: ObservableObject {
     }
     
     private func handleError(_ error: RaceRepositoryError) {
-        DispatchQueue.main.async {
-            self.raceState = .error(message: error.localizedDescription)
+        DispatchQueue.main.async { [weak self] in
+            guard let self = self else { return }
+            switch error {
+            case .captchaRequired(let url):
+                self.stopRace()
+                self.raceState = .captchaRequired(url: url)
+                
+            case .rateLimitExceeded:
+                self.stopRace()
+                self.raceState = .error(message: "Rate limit exceeded")
+                
+            default:
+                self.raceState = .error(message: error.localizedDescription)
+            }
         }
     }
     

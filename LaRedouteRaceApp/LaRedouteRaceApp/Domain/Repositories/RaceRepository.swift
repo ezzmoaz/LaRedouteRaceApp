@@ -14,6 +14,8 @@ protocol RaceRepository {
 enum RaceRepositoryError: Error, Equatable {
     case networkError
     case invalidData
+    case rateLimitExceeded
+    case captchaRequired(URL)
     case serverError(String)
     
     var localizedDescription: String {
@@ -22,6 +24,10 @@ enum RaceRepositoryError: Error, Equatable {
             return "Network connection failed"
         case .invalidData:
             return "Invalid data received from server"
+        case .rateLimitExceeded:
+            return "Too many requests. Please wait."
+        case .captchaRequired:
+            return "Security verification required"
         case .serverError(let message):
             return "Server error: \(message)"
         }
